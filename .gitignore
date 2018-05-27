@@ -34,4 +34,4 @@ yarn-error.log*
 *.launch
 .settings/
 *.sublime-workspace
-/server/node_modules/
+keys.js
