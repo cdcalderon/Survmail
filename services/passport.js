@@ -20,7 +20,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback',
+      callbackURL: '/auth/google/callback', // relative path - https issue heroku as it needs to figure out domain
+      proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({ gooogleId: profile.id }).then(existingUser => {
