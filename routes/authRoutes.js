@@ -17,6 +17,5 @@ module.exports = app => {
   app.get('/api/logout', (req, res) => {
     req.logout(); //attached by passport
       res.send(req.user);
-      //res.redirect('/');
   });
 };
